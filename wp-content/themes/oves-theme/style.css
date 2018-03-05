@@ -1,0 +1,728 @@
+/*
+Theme Name: OVES Theme
+Theme URI: http://arteveldehogeschool.be/
+Description: Dit is een thema ontworpen voor Oves (KAVVV & Fedes vzw) . Dit is in opdracht voor het vak Crossmediaal Project, uit de opleiding Grafische en Digitale Media van Arteveldehogeschool.
+Version: 1.0
+Author: Simon Decloedt, Anton Bardyn, Anneleen Peeters
+Author URI: https://github.com/simodecl/
+Tags: sport, belgium, vzw, organisatie, vriendenclubs, clubs, sportkampen, beweging, dans
+*/
+
+/* =Reset
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    border: 0;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+html {
+    overflow-y: scroll; /* Keeps page centered in all browsers regardless of content height */
+    -webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+    -ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+body {
+    background: #fff;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+    display: block;
+
+}
+table { /* tables still need 'cellspacing="0"' in the markup */
+    border-collapse: separate;
+    border-spacing: 0;
+}
+caption, th, td {
+    font-weight: normal;
+    text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: "";
+}
+blockquote, q {
+    quotes: "" "";
+}
+a:focus {
+    outline: thin dotted;
+}
+a:hover,
+a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+    outline: 0;
+}
+a img {
+    border: 0;
+}
+button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    
+
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+}
+a:hover, a:focus {
+    text-decoration: none;
+}
+/*end of reset css*/
+
+/*------------------------------------------Main css------------------------------*/
+a, button {
+    transition: all 0.2s ease-in-out;
+}
+#main {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto 20px;
+}
+.pageTitle{
+    width: 100%;
+    text-align: center;
+    margin: 100px auto 50px;
+    font-weight: bold;
+    padding: 0 5px;
+    font-size: 1.5em;
+
+}
+.button {
+    color: #FFF;
+    border: solid #FFF 3px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    margin: 5px 10px;
+    padding: 10 0;
+    width: 220px;
+    display: flex;
+    justify-content: center;
+}
+.basic {
+    padding: 2%;
+}
+.basic h3{
+    margin: 20 0 10;
+    font-weight: bold;
+}
+/*-------------------------------------------Header-----------------------------------------*/
+.headerContainer {
+    display: flex;
+    background-color: #3C3C3B; /*Grijs1*/
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 calc(50vw - 700px);
+    min-height: 175px;
+}
+.custom-logo {
+    height: 100px;
+    width: inherit;
+}
+.nav-main li a, .toggle-menu {
+    color: #FFF;
+    border: solid #FFF 3px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    margin: 5px 10px;
+    font-weight: bold;
+    width: 220px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-main li a:hover {
+    color: #3C3C3B; /*Grijs1*/
+    background-color: #FFF;
+}
+
+.nav-secondary li a {
+    color: #9D9D9C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5x 10px;
+    min-width: 150px;
+    padding: 0;
+}
+.nav-secondary li a:hover {
+    background-color: transparent;
+    color: #d2d4d4;
+}
+.toggle-menu{
+    color: #3C3C3B; /*Grijs1*/
+    background-color: #FFF;
+    text-align: center;
+    padding: 10 0;
+    margin-top: 10;
+    display: none;
+}
+/*-----------------------------------------Footer---------------------------------------------------------------*/
+
+.footerContainer {
+    display: flex;
+    background-color: #2F2F2F;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px calc(50vw - 700px);
+    min-height: 175px;
+    color: #FFF;
+}
+.footerLogo{
+    align-self: center;
+}
+.footerContainer h1 {
+    font-weight: bold;
+}
+.footerContainer p {
+    padding: 10px 0;
+}
+.footerContainer p img {
+    width: 150px;
+    height: inherit;
+}
+
+.footerItem {
+    min-width: 220px;
+    margin:10px;
+}
+
+.footerContactText {
+    display: flex;
+    flex-direction: row;
+}
+.footerContactText p:first-child{
+    margin-right: 20px;
+}
+
+.nav-footer {
+    width: 200px;
+}
+
+.nav-footer li a {
+    color: #FFF
+}
+.nav-footer li a:hover {
+    color: #9D9D9C;
+    background-color: transparent;
+}
+
+/*-------------------------------------------Nieuws post---------------------------------------------------------------------*/
+
+.singleContainer{
+    background-color: #D2D4D4;
+    padding: 100px;
+    padding-left: 70px;
+    display:flex;
+    flex-direction: row;
+}
+.singlePost{
+    background-color: #FFF;
+    padding: 0 10% 10%;
+    width: 90%;
+    max-width: 768px;
+}
+
+.singleDateContainer div {
+    text-align: right;
+    font-weight: bold;
+    padding-right: 10px;
+}
+.singleDateContainer {
+    width: 90;
+}
+.day {
+    color: #465CA6;
+    font-size: 3rem;
+}
+.month, .year {
+    color: #FFF;
+}
+
+.singleTitle {
+    margin-top: 50px;
+    margin-bottom: 25px;
+    color: #465CA6;
+    font-size: 2rem;
+}
+.postsContainer{
+    display: flex;
+    flex-direction: column;
+}
+.postsGroup {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+.singlePostGroup {
+    min-height: 300px;
+    max-height: 300px;
+    width: 100%;
+    max-width: 768px;
+}
+
+/*----------------------------------------Bestuur---------------------------------------------------------------------------*/
+
+.bestuurContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.bestuurCategory {
+    background-color: #9D9D9C;
+    color: #3C3C3B;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 100%;
+    max-width: 520px;
+    height: max-content;
+    padding-bottom:20px;
+}
+.bestuurMember {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 5%;
+}
+.bestuurPicture{
+    width: 100px;
+}
+.bestuurPicture img {
+    width: 100%;
+    height: auto;
+}
+.bestuurCategoryTitle {
+    width: 100%;
+    text-align: center;
+    margin: 20px auto 10px;
+    font-weight: bold;
+}
+.mailto {
+    height: 30px;
+    width: auto;
+}
+.bestuurMemberInfo {
+    margin: 0 10px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.bestuurMemberTitle {
+    color: #FFF;
+    font-weight: bold;
+}
+.bestuur-algemeen-secretariaat {
+    background-color: #9D9D9C;
+}
+.bestuur-afdelingsbestuur-oost, .bestuur-raad-van-bestuur {
+    background-color: #3C3C3B;
+    color: #FFF;
+}
+
+/*----------------------------------------Bewegingsschool-------------------------------------------------------------------*/
+
+.descriptionContainer {
+    width: 100%;
+    display:flex;
+    justify-content: center;
+}
+.descriptionMain {
+    max-width: 500px;
+    margin: 20px;
+    text-align: justify;
+}
+.descriptionContainerExtra {
+    display: none;
+    max-width:1080px;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+}
+.descriptionContainerExtra div {
+    padding: 20px;
+    min-width: 300px;
+    max-width: 33%;
+}
+#toggle-description {
+    display: block;
+    width: max-content;
+    margin: 20px auto;
+}
+.bewegingContainer {
+    border: solid #9D9D9C 2px;
+}
+.bewegingContainerButton {
+    background-color: #9D9D9C;
+    color: #FFF;
+    padding-bottom: 30px;
+}
+.bewegingButtonTitle {
+    background-color: #9D9D9C;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 5px;
+    font-size: 1.2em;
+}
+.bewegingButtons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.bewegingButton1 {
+    background-color: #FFF;
+    color: #9D9D9C;
+}
+.bewegingButtons button:hover {
+    background-color: #FFF !important;
+    color: #9D9D9C !important;
+}
+.section {
+    display: none;
+}
+#section-1 {
+    display: block;
+}
+.sectionTitle {
+    color: #9D9D9C;
+}
+.sectionCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.sectionCard {
+    background-color: #D2D4D4;
+    width: 30%;
+    margin:1%;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+}
+.sectionCard img {
+    height: 100px;
+}
+.sectionCard * {
+    padding:5px 0;
+}
+.sectionCard ul {
+    margin-left: 20px;
+}
+.infoboxContainer {
+    display: flex;
+    width: 100%;
+    max-width: 1080px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.infobox {
+    width: 300px;
+    padding: 20px;
+}
+
+.bewegingInschrijven {
+    background-color: #E73843;
+    border-color: #E73843;
+    margin: 20px auto;
+}
+.bewegingInschrijven:focus, .bewegingInschrijven:hover {
+    color: #E73843;
+    background-color: #FFF;
+}
+/*----------------------------------------Sportkampen--------------------------------------------------------------------------------*/
+
+.greylink {
+    background-color: transparent;
+    border-color: #3C3C3B;
+    color: #3C3C3B;
+    width: max-content;
+    padding: 10px 20px;
+}
+.greylink:focus, .greylink:hover {
+    background-color: #3C3C3B;
+    color: #FFF;
+}
+.sportkampenMain {
+    max-width: 100%;
+    background-color: #3C3C3B;
+    margin-top: -1px;
+    margin-bottom: 0;
+}
+.subTitle {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: bold;
+    padding: 50px 5px;
+    font-size: 1.5em;
+    color: #FFF;
+}
+.sportkampContainer {
+    display: flex;
+    max-width: 1080px;
+    padding: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+}
+.sportkamp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+}
+.sportkampTitle {
+    color: #FFF;
+    padding: 20px 0;
+}
+
+.sportkampHead {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    padding-top: 40px;
+    background-color: #9D9D9C;
+    margin: 0 auto;
+    justify-content: center;
+}
+.sportkampPicture a img {
+    -webkit-transition: 200ms linear all;
+    -moz-transition: 200ms linear all;
+    -o-transition: 200ms linear all;
+    transition: 200ms linear all;
+}
+.sportkampPicture a img:hover {
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Safari */
+    transform: rotate(45deg);
+
+    -webkit-transition: 200ms linear all;
+    -moz-transition: 200ms linear all;
+    -o-transition: 200ms linear all;
+    transition: 200ms linear all;
+}
+/*----------------------------------------Kampen detailpagina---------------------------------------------------------------*/
+.kampButtons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.kampButton {
+    color: #3C3C3B;
+    border: solid #3C3C3B;
+}
+.kampButton1{
+    background-color: #3C3C3B;
+    color: #FFF;
+}
+.kampButton:hover {
+    background-color: #3C3C3B !important;
+    color: #FFF !important;
+}
+.kampButtons button:only-child {
+    display: none;
+}
+.kampLijst {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1080px;
+    justify-content: center;
+}
+.kampLijstItem {
+    background-color: #9D9D9C;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 100%;
+    max-width: 520px;
+    height: max-content;
+    padding:20px;
+    align-items: center;
+}
+.kampIconContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+}
+.kampIcon {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+}
+.kampLogo {
+    width: 100px;
+    height: 100px;
+}
+.kampTitle {
+    padding: 20px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.kampLijstCategorie {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+#kampLijstCategorie-1 {
+    display: flex;
+}
+/*----------------------------------------Color only class------------------------------------------------------------------*/
+
+.red {
+    color: #E73843;
+}
+.limegreen {
+    color: #96C11F;
+}
+.center {
+    display:block;
+    margin: 0 auto;
+}
+/*-----------------------------------------Media Queries---------------------------------------------------------------------*/
+
+@media screen and (max-width: 1400px){
+    .headerContainer, .footerContainer {
+        padding:50px;
+    }
+    .footerContainer {
+        flex-wrap: wrap;
+    }
+    
+    .footerContactText {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .headerContainer {
+        flex-direction: column;
+    }
+    .headerContainer, .footerContainer {
+        flex-wrap: wrap;
+    }
+    .navbar-nav{
+        margin: 0 auto;
+    }
+    .footerLogo {
+        padding-bottom: 10px;
+    }
+    .singleContainer{
+        flex-direction: column;
+        padding: 70px;
+    }
+    .singleDateContainer, .singlePost {
+        width: 100%;
+    }
+    .singleDateContainer div{
+        text-align: left;
+        padding: 0;
+    }
+    .postsGroup {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footerContainer{
+        flex-direction: column;
+    }
+    .footerItem{
+        margin: 10px auto;
+    }
+    .nav-main, .nav-secondary {
+        display:none;
+    }
+    .toggle-menu{
+        display: block;
+    }
+    .postsGroup {
+        height: auto;
+    }
+    .singlePostGroup{
+        max-height: max-content;
+    }
+    .sectionCard {
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .nav-main, .nav-secondary {
+        display:block !important;
+    }
+    .toggle-menu{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .singleContainer {
+        padding: 10px;
+    }
+    .descriptionContainerExtra div {
+        max-width: 100%;
+    }
+    .sectionCard {
+        width: 100%;
+    }
+    .infobox {
+        width: 100%;
+    }
+}
+
