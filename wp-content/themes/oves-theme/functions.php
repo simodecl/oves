@@ -81,12 +81,12 @@ add_action( 'after_setup_theme', 'oves_theme_setup' );
 function add_theme_scripts() {
   wp_register_script( 'bootstrap-js', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array('jquery'), NULL, true );
   wp_register_style( 'bootstrap-css', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', false, NULL, 'all' );
-  wp_register_style( 'Montserrat|Cardo', 'https://fonts.googleapis.com/css?family=Montserrat|Cardo' );
+  wp_register_style( 'OpenSans-Montserrat', 'https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,700|Open+Sans:300,400,400i,700' );
 
   wp_enqueue_script( 'bootstrap-js' );
   wp_enqueue_style( 'bootstrap-css' );
 
-  wp_enqueue_style( 'Montserrat|Cardo');
+  wp_enqueue_style( 'OpenSans-Montserrat');
   wp_enqueue_style( 'style', get_stylesheet_uri() );
     wp_enqueue_script( 'jquery-v-2', 'http://code.jquery.com/jquery-2.1.3.min.js', false );
 

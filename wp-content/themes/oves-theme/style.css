@@ -70,6 +70,7 @@ a:focus {
 a:hover,
 a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
     outline: 0;
+    color: inherit;
 }
 a img {
     border: 0;
@@ -103,6 +104,9 @@ a:hover, a:focus {
 /*end of reset css*/
 
 /*------------------------------------------Main css------------------------------*/
+body {
+    font-family: 'Montserrat', sans-serif;
+}
 a, button {
     transition: all 0.2s ease-in-out;
 }
@@ -115,6 +119,7 @@ a, button {
     width: 100%;
     text-align: center;
     margin: 100px auto 50px;
+    font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     padding: 0 5px;
     font-size: 1.5em;
@@ -137,6 +142,7 @@ a, button {
 }
 .basic h3{
     margin: 20 0 10;
+    font-family: 'Open Sans', sans-serif;
     font-weight: bold;
 }
 /*-------------------------------------------Header-----------------------------------------*/
@@ -160,6 +166,7 @@ a, button {
     -moz-border-radius: 30px;
     border-radius: 30px;
     margin: 5px 10px;
+    font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     width: 220px;
     display: flex;
@@ -209,6 +216,7 @@ a, button {
     align-self: center;
 }
 .footerContainer h1 {
+    font-family: 'Open Sans', sans-serif;
     font-weight: bold;
 }
 .footerContainer p {
@@ -262,6 +270,7 @@ a, button {
 
 .singleDateContainer div {
     text-align: right;
+    font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     padding-right: 10px;
 }
@@ -335,6 +344,7 @@ a, button {
     width: 100%;
     text-align: center;
     margin: 20px auto 10px;
+    font-family: 'Open Sans', sans-serif;
     font-weight: bold;
 }
 .mailto {
@@ -349,6 +359,7 @@ a, button {
 }
 .bestuurMemberTitle {
     color: #FFF;
+    font-family: 'Open Sans', sans-serif;
     font-weight: bold;
 }
 .bestuur-algemeen-secretariaat {
@@ -378,6 +389,10 @@ a, button {
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
+}
+.descriptionContainer img, .descriptionContainerExtra img {
+    max-width: -webkit-fill-available;
+    height: auto;
 }
 .descriptionContainerExtra div {
     padding: 20px;
@@ -479,7 +494,7 @@ a, button {
 /*----------------------------------------Sportkampen--------------------------------------------------------------------------------*/
 
 .greylink {
-    background-color: transparent;
+    background-color: #FFF;
     border-color: #3C3C3B;
     color: #3C3C3B;
     width: max-content;
@@ -489,9 +504,26 @@ a, button {
     background-color: #3C3C3B;
     color: #FFF;
 }
+.lightwhitelink {
+    color: #FFF;
+    border-color: #FFF;
+    background-color: #9D9D9C;
+    width: max-content;
+    padding: 10px 20px;
+}
+.lightwhitelink:focus, .lightwhitelink:hover {
+    background-color: #FFF;
+    color: #9D9D9C;
+}
 .sportkampenMain {
     max-width: 100%;
     background-color: #3C3C3B;
+    margin-top: -1px;
+    margin-bottom: 0;
+}
+.sportclubsMain {
+    max-width: 100%;
+    background-color: #D2D4D4;
     margin-top: -1px;
     margin-bottom: 0;
 }
@@ -499,6 +531,7 @@ a, button {
     width: 100%;
     text-align: center;
     margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     padding: 50px 5px;
     font-size: 1.5em;
@@ -522,15 +555,18 @@ a, button {
 .sportkampTitle {
     color: #FFF;
     padding: 20px 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .sportkampHead {
     display: flex;
     width: 100%;
-    padding: 20px;
+    padding: 20px 20px 0px;
     padding-top: 40px;
     background-color: #9D9D9C;
-    margin: 0 auto;
+    margin: 0 auto -1px;
     justify-content: center;
 }
 .sportkampPicture a img {
@@ -549,6 +585,7 @@ a, button {
     -o-transition: 200ms linear all;
     transition: 200ms linear all;
 }
+
 /*----------------------------------------Kampen detailpagina---------------------------------------------------------------*/
 .kampButtons {
     display: flex;
@@ -579,6 +616,7 @@ a, button {
     width: 100%;
     max-width: 1080px;
     justify-content: center;
+    padding: 0;
 }
 .kampLijstItem {
     background-color: #9D9D9C;
@@ -611,6 +649,7 @@ a, button {
 .kampTitle {
     padding: 20px 0;
     font-size: 1.2em;
+    font-family: 'Open Sans', sans-serif;
     font-weight: bold;
 }
 .kampLijstCategorie {
@@ -620,6 +659,28 @@ a, button {
 }
 #kampLijstCategorie-1 {
     display: flex;
+}
+.kampBeschrijving {
+    width:80%;
+    padding: 10 0;
+}
+.kampBeschrijving p {
+    padding: 10 0;
+}
+.kampBeschrijving img {
+    max-width: -webkit-fill-available;
+    height: auto;
+}
+
+/*----------------------------------------Sportclubs (gebruikt veel van sportkamp)------------------------------------------*/
+
+.bestuurMemberCard {
+    background-color: #9D9D9C;
+    color: #FFF;
+    width: 95%;
+    max-width: 500px;
+    padding: 2% 1%;
+    margin: 10px 0;
 }
 /*----------------------------------------Color only class------------------------------------------------------------------*/
 

@@ -34,13 +34,16 @@
         <h1>PARTNERS</h1>
 
         <p>
-            <img class="alignnone size-full wp-image-48" src="/OVES/wp-content/uploads/2018/03/Ethias.png" alt="" width="270" height="200">
-            <img class="alignnone size-medium wp-image-50" src="/OVES/wp-content/uploads/2018/03/SportVlaanderen-300x135.png" alt="" width="300" height="135">
-            <img class="alignnone size-medium wp-image-49" src="/OVES/wp-content/uploads/2018/03/ProvincieAntwerpen-300x91.png" alt="" width="300" height="91">
+            <img class="alignnone size-full wp-image-48" src="/wp-content/uploads/2018/03/Ethias.png" alt="" width="270" height="200">
+            <img class="alignnone size-medium wp-image-50" src="/wp-content/uploads/2018/03/SportVlaanderen-300x135.png" alt="" width="300" height="135">
+            <img class="alignnone size-medium wp-image-49" src="/wp-content/uploads/2018/03/ProvincieAntwerpen-300x91.png" alt="" width="300" height="91">
         </p>
 
     </div>
 </div>
     <?php wp_footer(); ?>
+    <script>
+    console.log(<?= json_encode($algemeen); ?>);
+</script>
     </body>
 </html>

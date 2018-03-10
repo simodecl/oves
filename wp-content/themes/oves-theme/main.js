@@ -53,7 +53,7 @@ function show($id) {
     buttonActive.style.color = "#9D9D9C";
 }
 
-function showKamp($id) {
+function showSport($id) {
     let hideThis = document.querySelectorAll('.kampLijstCategorie');
     let showThis = document.getElementById('kampLijstCategorie-' + $id);
     let buttonAll = document.querySelectorAll('.toggle');

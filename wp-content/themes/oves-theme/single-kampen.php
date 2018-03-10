@@ -6,24 +6,32 @@ get_header();
 if(have_posts()):
     while(have_posts()):
         the_post();
+        global $post;
 ?>      <div class="sportkampHead">  
             <div class="sportkamp">
                 <div class="sportkampPicture">
                     <?php if(has_post_thumbnail()) : ?>
-                        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                            <?php the_post_thumbnail('thumbnail'); ?>
-                        </a>
+                        <?php if( get_field('page_link', $post->ID) ): ?>
+                            <a href="<?php the_field('page_link', $post->ID); ?>" target="_blank" title="<?php the_title_attribute(); ?>">
+                                <?php the_post_thumbnail('thumbnail'); ?>
+                            </a>
+                        <?php else : ?>
+                            <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+                                <?php the_post_thumbnail('thumbnail'); ?>
+                            </a>
+                        <?php endif; ?>
                     <?php endif; ?>
                 </div>    
-                <div class="sportkampTitle">
+                <div style="font-size:1.5em;font-weight: bold;" class="sportkampTitle">
                     <?php  echo get_the_title(); ?>
                 </div>      
             </div>
         </div>
+        <img width="100%" src="<?php bloginfo('template_url'); ?>/assets/waves/wave_groen-01.png" />
         <h1 class="pageTitle"><?php the_field('pagina_hoofding') ?></h1>
         <?php if( get_field('beschrijving') ) :?>
             <div class="descriptionContainer">
-                <div class="descriptionMain"><?php the_field('beschrijving') ?></div>
+                <div style="text-align: center;" class="descriptionMain"><?php the_field('beschrijving') ?></div>
             </div>    
         <?php endif; ?>
 
@@ -52,7 +60,7 @@ if(have_posts()):
 						<div class="kampLijstCategorie" id="kampLijstCategorie-<?php echo $i; ?>">
                             <?php if( get_sub_field('categorie_beschrijving')) : ?>
                                 <div class="descriptionContainer">
-                                    <div class="descriptionMain"><?php the_sub_field('categorie_beschrijving') ?></div>
+                                    <div style="text-align: center;" class="descriptionMain"><?php the_sub_field('categorie_beschrijving') ?></div>
                                 </div>  
                             <?php endif; ?>    
 							<?php 
@@ -101,6 +109,17 @@ if(have_posts()):
                                                 <div><?php the_sub_field('sportkamp_waarschuwing'); ?></div>
                                             </div>
                                         <?php endif; ?>
+                                        <?php if( get_sub_field('kamp_beschrijving')) : ?>
+                                            <div class="kampBeschrijving"><?php the_sub_field('kamp_beschrijving'); ?></div>
+                                        <?php endif; ?>
+                                        <?php $link = get_field('link_1');
+                                            if( $link ): ?>
+                                                <button style="margin: 10 auto" class="center"><a class="button lightwhitelink" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a></button>
+                                        <?php endif; ?>
+                                        <?php $link2 = get_field('link_2');
+                                            if( $link2 ): ?>
+                                                <button style="margin: 10 auto; font-weight: bold; text-transform: uppercase;" class="center"><a style="border-color: #FFF" class="button greylink" href="<?php echo $link2['url']; ?>" target="<?php echo $link2['target']; ?>"><?php echo $link2['title']; ?></a></button>
+                                        <?php endif; ?>  
 
                                     </li>
 								<?php endwhile; ?>
