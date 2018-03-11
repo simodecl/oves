@@ -93,7 +93,7 @@ function add_theme_scripts() {
    wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css', array(), '4.1.0' );
     add_action( 'wp_enqueue_scripts', 'themeslug_enqueue_script' );
 
-  wp_enqueue_script( 'script', get_template_directory_uri() . '/main.js');
+  wp_enqueue_script( 'script', get_template_directory_uri() . '/js/main.js');
 
 
   

@@ -145,6 +145,7 @@ a, button {
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
 }
+
 /*-------------------------------------------Header-----------------------------------------*/
 .headerContainer {
     display: flex;
@@ -682,6 +683,43 @@ a, button {
     padding: 2% 1%;
     margin: 10px 0;
 }
+.pdfLijstContainer {
+    display: flex;
+    max-width: 1080px;
+    padding: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    justify-content: center;
+    background-color: #D2D4D4;
+}
+.pdfLijst {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 600px;
+    width: 100%;
+    padding: 10px 0;
+}
+.pdf a[href$=".pdf"]{
+    background-repeat: no-repeat;
+	background-size: 150px 150px;
+	display: inline-block;
+	padding-top: 150px;
+    width: 150px;
+    text-align:center;
+    color: #3C3C3B;  
+}
+.pdf a[href$=".pdf"]:hover {
+    color: #FFF;
+}
+.metaslider img {
+    width: 100%;
+    max-width: 768px;
+}
+
 /*----------------------------------------Color only class------------------------------------------------------------------*/
 
 .red {

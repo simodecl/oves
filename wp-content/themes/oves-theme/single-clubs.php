@@ -68,7 +68,7 @@ if(have_posts()):
                             <?php endif; ?>
 
 							<?php 
-							// check for rows (sub repeater)
+							// check for rows
                             if( have_rows('inhoud') ):
 								// loop through rows (sub repeater, category specific )
                                 while( have_rows('inhoud') ): the_row();
@@ -100,15 +100,36 @@ if(have_posts()):
                                                 <img class="mailto" src="<?php bloginfo('template_url'); ?>/assets/img/email.png" alt="<?php echo get_the_title(); ?>" title="<?php echo get_the_title(); ?>" />
                                             </a>    
                                         </div>
-                                    <?php endif; ?>    
+                                    <?php elseif( get_row_layout() === 'pdflijst' ): ?>
+                                        <div class="pdfLijstContainer">
+                                            <?php if(get_sub_field('lijst_titel')) : ?>
+                                                <h1 class="pageTitle"><?php the_sub_field('lijst_titel') ?></h1>
+                                            <?php endif; ?>
+                                            <?php if( have_rows('pdfs') ): ?>
+                                                <ul class="pdfLijst" >
+                                                <?php while( have_rows('pdfs') ): the_row(); ?>
+                                                <?php $pdf = get_sub_field('pdf');
+                                                    if( $pdf ): ?>
+                                                        <li class="pdf">
+                                                            <a style="background-image:url(<?php bloginfo('template_url'); ?>/assets/img/pdf_wit_donkergrijs-01.png);" target="__blank" href="<?php echo $pdf['url']; ?>"><?php echo $pdf['title']; ?></a>
+                                                        </li>
+                                                    <?php endif; ?>
+                                                <?php endwhile; ?>
+                                                </ul>
+							                <?php endif; //if( have_rows('pdfs') ): ?>
+                                        </div>
+                                    <?php elseif( get_row_layout() === 'fotogalerij' ): ?>
+                                        <?php if(get_sub_field('metaslider_shortcode')): ?>
+                                            <div style="margin-bottom:20px"><?php echo do_shortcode(get_sub_field('metaslider_shortcode')) ?></div>
+                                        <?php endif; ?>
+                                    <?php else: endif; ?>    
 								<?php endwhile; ?>
-								</ul>
-							<?php endif; //if( get_sub_field('sportkamp_info') ): ?>
+							<?php endif; //if( have_rows('inhoud') ): ?>
 						</div>	
                         <?php $i++; //increment every loop ?>
-					<?php endwhile; // while( has_sub_field('categorie') ): ?>
+					<?php endwhile; ?>
 					
-				<?php endif; // if( get_field('categorie') ): ?>
+				<?php endif;?>
 <?php
     endwhile;
 endif;

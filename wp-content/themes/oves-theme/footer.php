@@ -42,8 +42,5 @@
     </div>
 </div>
     <?php wp_footer(); ?>
-    <script>
-    console.log(<?= json_encode($algemeen); ?>);
-</script>
     </body>
 </html>
