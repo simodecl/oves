@@ -686,6 +686,7 @@ a, button {
 .pdfLijstContainer {
     display: flex;
     max-width: 1080px;
+    width:100%;
     padding: 20px;
     flex-direction: row;
     flex-wrap: wrap;
@@ -699,11 +700,11 @@ a, button {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 600px;
+    max-width: 768px;
     width: 100%;
     padding: 10px 0;
 }
-.pdf a[href$=".pdf"]{
+.pdf a[href$=".pdf"], .pdf a[href$=".xlsx"]{
     background-repeat: no-repeat;
 	background-size: 150px 150px;
 	display: inline-block;
@@ -712,14 +713,51 @@ a, button {
     text-align:center;
     color: #3C3C3B;  
 }
-.pdf a[href$=".pdf"]:hover {
+.pdf a[href$=".pdf"]:hover, .pdf a[href$=".xlsx"]:hover {
     color: #FFF;
 }
 .metaslider img {
     width: 100%;
     max-width: 768px;
 }
+/*----------------------------------------Club aansluiten-------------------------------------------------------------------*/
 
+.joinContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.joinInfo {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 100%;
+    max-width: 520px;
+    height: max-content;
+    padding:50px;
+    align-items: center;
+}
+.joinInfo a, .joinInfoveld a {
+    align-self: center;
+}
+.joinInfo-1 {
+    background-color: #D2D4D4;
+    color: #3C3C3B;
+}
+.joinInfo-2 {
+    background-color: #9D9D9C;
+    color: #FFF;
+}
+.subtitle {
+    width: 100%;
+    text-align: center;
+    margin: 50px auto 25px;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 5px;
+    font-weight: 400;
+
+}
 /*----------------------------------------Color only class------------------------------------------------------------------*/
 
 .red {
@@ -727,6 +765,12 @@ a, button {
 }
 .limegreen {
     color: #96C11F;
+}
+.blue {
+    color: #465CA6; 
+}
+.darkgrey {
+    color: #3C3C3B;
 }
 .center {
     display:block;
@@ -773,6 +817,9 @@ a, button {
     }
     .postsGroup {
         flex-direction: column;
+    }
+    .joinInfo {
+        margin: 10px 0;
     }
 }
 
