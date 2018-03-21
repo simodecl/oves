@@ -13,7 +13,7 @@ get_header();
     <?php $info1= get_field('joinInfo1'); if($info1) : ?>
         <div class="joinInfo joinInfo-1">
             <?php if($info1['sub_titel']) : ?>
-                <h1 class="subtitle blue"><?php echo $info1['sub_titel'] ?></h1>
+                <h1 class="sub_title blue"><?php echo $info1['sub_titel'] ?></h1>
             <?php endif; ?>
             <?php if($info1['infoveld']) : ?>
                 <div class="joinInfoveld"><?php echo $info1['infoveld'] ?></div>
@@ -28,7 +28,7 @@ get_header();
     <?php $info2= get_field('joinInfo2'); if($info2) : ?>
         <div class="joinInfo joinInfo-2">
             <?php if($info2['sub_titel']) : ?>
-                <h1 class="subtitle"><?php echo $info2['sub_titel'] ?></h1>
+                <h1 class="sub_title"><?php echo $info2['sub_titel'] ?></h1>
             <?php endif; ?>
             <?php if($info2['infoveld']) : ?>
                 <div class="joinInfoveld"><?php echo $info2['infoveld'] ?></div>
@@ -43,7 +43,7 @@ get_header();
     <?php $pdflijst = get_field('pdflijst'); if($pdflijst) : ?>
         <div class="pdfLijstContainer">
             <?php if($pdflijst['lijst_titel']) : ?>
-                <h1 class="subtitle darkgrey"><?php echo $pdflijst['lijst_titel'] ?></h1>
+                <h1 class="sub_title darkgrey"><?php echo $pdflijst['lijst_titel'] ?></h1>
             <?php endif; ?>
             <?php $pdfs = $pdflijst['pdfs']?>
             <?php if( $pdfs ): ?>

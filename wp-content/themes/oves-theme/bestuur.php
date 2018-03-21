@@ -61,9 +61,10 @@ foreach( $taxonomies as $taxonomy ) :
                         </div>    
                         <div class="bestuurMemberContent">
                             <?php the_content(); ?>
+                            <p><?php echo get_field('emailadres', $post->ID) ?></p>
                         </div>
                     </div>
-                    <img class="mailto" src="<?php bloginfo('template_url'); ?>/assets/img/email.png" alt="<?php echo get_the_title(); ?>" title="<?php echo get_the_title(); ?>" />
+                    <a href="mailto:<?php echo get_field('emailadres', $post->ID) ?>"><img class="mailto" src="<?php bloginfo('template_url'); ?>/assets/img/email.png" alt="<?php echo get_the_title(); ?>" title="<?php echo get_the_title(); ?>" /></a>
                 </div>                         
  
         <?php endwhile; endif; ?>

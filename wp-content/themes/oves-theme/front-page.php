@@ -3,51 +3,73 @@
 
 get_header();
 ?>
-
-        <container class="content-sidebar_container">
-            <container class="modelbox_container">
-                <div class="home_content"><h2 class="single_title">Front page content</h2></div>
-            <?php //NEWEST MODELS
-            $new_loop = new WP_Query( array(
-                'post_type' => 'model',
-                'posts_per_page' => 2 // put number of posts that you'd like to display
-            ) );
+<?php if( get_field('headerimages') ) :?>
+<div class="headerimageContainer">
+    <?php echo do_shortcode(get_field('headerimages')) ?>
+</div>
+<?php endif; ?>  
+<div id="main" class="homeMain">
+    <div class="homeNewsContainer">
+        <div class="pageTitle">
+            WEES OP DE HOOGTE!
+        </div>
+        <?php
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+        query_posts('posts_per_page=5&paged=' . $paged);
+        if(have_posts()): while(have_posts()):
+                the_post();
+        ?>      <div class="postsGroup">  
+                    <div class="singleDateContainer">
+                        <div class="day"><?php echo get_the_date('d') ?></div>
+                        <div class="month"><?php echo get_the_date('F') ?></div>
+                        <div class="year"><?php echo get_the_date('Y') ?></div>
+                    </div>
+                    <div class="singlePost singlePostGroup">
+        <?php            
+                    the_title('<h2 class="singleTitle">','</h2>');
+                    the_excerpt();
             ?>
-
-            <?php if ( $new_loop->have_posts() ) : ?>
-                <?php while ( $new_loop->have_posts() ) : $new_loop->the_post();
-                     echo '<a title="';
-                     the_title_attribute();
-                     echo '" href="';
-                     the_permalink();
-                     echo '">';
-
-                     echo '<div class="modelbox" style="background:';
-                     if ( has_post_thumbnail() ) {
-                         echo 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(\'';
-                         the_post_thumbnail_url();
-                         echo '\')';
-                     } else {
-                         echo '#8E8E8E' ;
-                     }
-                     echo';min-width:300px; width:20vw; min-height: 300px; height:20vw; background-repeat: no-repeat;background-size: cover;background-position-x: center;">';
-                     the_title();
-                     echo '</div>';
-
-                     echo '</a>';
-
-            endwhile;?>
-            <?php else: ?>
-            <?php endif; ?>
-            <?php wp_reset_query(); ?>
-                <?php if( get_field('Wedstrijd') ): ?>
-                    <div class="home_content contest"><?php the_field('Wedstrijd'); ?></div>
-                <?php endif; ?>
-            </container>
-            <aside class="single_post-sidebar">
-                <?php get_sidebar(); ?>
-            </aside>
-        </container>
-
+                        <a href="<?php the_permalink(); ?>" class="readmore">Lees meer</a>
+                    </div>
+                </div>
+        <?php endwhile; else:
+            echo 'No content available';
+        endif;?>
+         <button class="center"><a class="button moreNews" href="/nieuws" >LEES MEER NIEUWS</a></button>
     </div>
+    <div class="homeSportsContainer">
+        <div class="pageTitle">
+            ENKELE SPORTEN
+        </div>
+        <?php
+        $args = array( 'post_type' => 'clubs', 'posts_per_page' => 6,'orderby'=> 'rand');
+        $clubs = new WP_Query( $args );
+        if ( $clubs->have_posts() ): while ( $clubs->have_posts() ) : $clubs->the_post(); ?>
+            <div class="sportkamp">
+                <div class="sportkampPicture">
+                    <?php if(has_post_thumbnail()) : ?>
+                        <?php if( get_field('page_link', $clubs->ID) ): ?>
+                            <a href="<?php the_field('page_link', $clubs->ID); ?>" target="_blank" title="<?php the_title_attribute(); ?>">
+                                <?php the_post_thumbnail('thumbnail'); ?>
+                            </a>
+                        <?php else : ?>
+                            <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+                                <?php the_post_thumbnail('thumbnail'); ?>
+                            </a>
+                        <?php endif; ?>
+            <?php endif; ?>
+                </div>    
+                <div class="sportkampTitle">
+                    <?php  echo get_the_title(); ?>
+                </div>      
+            </div> 
+        <?php endwhile;endif; ?>
+    </div>
+    <div class="newsletterContainer">
+        <h1 style="margin:25px auto;" class="pageTitle">SCHRIJF JE IN VOOR DE NIEUWSBRIEF!</h1>
+        <div class="descriptionMain">
+        Via de online nieuwsbrief ben je altijd op de hoogte. De nieuwsbrief zal maandelijk naar jouw e-mail adres gestuurd worden. 
+        </div>    
+    </div>
+</div>
 <?php get_footer(); ?>

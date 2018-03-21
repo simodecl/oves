@@ -11,20 +11,12 @@ if(have_posts()):
             <div class="sportkamp">
                 <div class="sportkampPicture">
                     <?php if(has_post_thumbnail()) : ?>
-                        <?php if( get_field('page_link', $post->ID) ): ?>
-                            <a href="<?php the_field('page_link', $post->ID); ?>" target="_blank" title="<?php the_title_attribute(); ?>">
-                                <?php the_post_thumbnail('thumbnail'); ?>
-                            </a>
-                        <?php else : ?>
-                            <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                                <?php the_post_thumbnail('thumbnail'); ?>
-                            </a>
-                        <?php endif; ?>
+                        <?php the_post_thumbnail('thumbnail'); ?>
                     <?php endif; ?>
                 </div>    
                 <div style="font-size:1.5em;font-weight: bold;" class="sportkampTitle">
                     <?php  echo get_the_title(); ?>
-                </div>      
+                </div>   
             </div>
         </div>
         <img width="100%" src="<?php bloginfo('template_url'); ?>/assets/waves/wave_groen-01.png" />
@@ -46,7 +38,7 @@ if(have_posts()):
                     while( have_rows('categorie') ): the_row(); ?>
                     
                         <?php if( get_sub_field('categorie_naam')) : ?>
-                            <button onClick="showKamp(<?php echo $n; ?>)" id="toggle-<?php echo $n; ?>" class="toggle button kampButton kampButton<?php echo $n; ?>">
+                            <button onClick="showSport(<?php echo $n; ?>)" id="toggle-<?php echo $n; ?>" class="toggle button kampButton kampButton<?php echo $n; ?>">
                                 <?php the_sub_field('categorie_naam'); ?>
                             </button>
                             <?php endif; ?>

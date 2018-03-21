@@ -15,7 +15,7 @@ get_header();
             <button class="center"><a class="button greylink" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a></button>
     <?php endif; ?>   
 
-<img width="100%" src="<?php bloginfo('template_url'); ?>/assets/waves/wave_groen-02.png" />
+<img style="margin-bottom:-10%;width:100%;" src="<?php bloginfo('template_url'); ?>/assets/waves/wave_groen-02.svg" />
 <div class="sportkampenMain">
     <h1 class="subTitle"><?php the_field('subtitel') ?></h1>
     <container class="sportkampContainer">

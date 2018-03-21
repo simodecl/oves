@@ -26,8 +26,8 @@ get_header();
             <div class="sportkamp">
                 <div class="sportkampPicture">
                     <?php if(has_post_thumbnail()) : ?>
-                        <?php if( get_field('page_link', $post->ID) ): ?>
-                            <a href="<?php the_field('page_link', $post->ID); ?>" target="_blank" title="<?php the_title_attribute(); ?>">
+                        <?php if( get_field('page_link', $clubs->ID) ): ?>
+                            <a href="<?php the_field('page_link', $clubs->ID); ?>" target="_blank" title="<?php the_title_attribute(); ?>">
                                 <?php the_post_thumbnail('thumbnail'); ?>
                             </a>
                         <?php else : ?>

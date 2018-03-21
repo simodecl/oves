@@ -72,7 +72,6 @@ if(have_posts()):
                             if( have_rows('inhoud') ):
 								// loop through rows (sub repeater, category specific )
                                 while( have_rows('inhoud') ): the_row();
-
                                     if( get_row_layout() === 'bestuurslid' ): ?>
                                         <div class="bestuurMember bestuurMemberCard">
                                             <div class="bestuurPicture">
@@ -111,7 +110,7 @@ if(have_posts()):
                                                 <?php $pdf = get_sub_field('pdf');
                                                     if( $pdf ): ?>
                                                         <li class="pdf">
-                                                            <a style="background-image:url(<?php bloginfo('template_url'); ?>/assets/img/pdf_wit_donkergrijs-01.png);" target="__blank" href="<?php echo $pdf['url']; ?>"><?php echo $pdf['title']; ?></a>
+                                                        <a style="background-image:url(<?php bloginfo('template_url'); ?>/assets/img/pdf_wit_donkergrijs-01.png);" target="__blank" href="<?php echo $pdf['url']; ?>"><?php echo $pdf['title']; ?></a>
                                                         </li>
                                                     <?php endif; ?>
                                                 <?php endwhile; ?>
@@ -122,6 +121,15 @@ if(have_posts()):
                                         <?php if(get_sub_field('metaslider_shortcode')): ?>
                                             <div style="margin-bottom:20px"><?php echo do_shortcode(get_sub_field('metaslider_shortcode')) ?></div>
                                         <?php endif; ?>
+                                    <?php elseif( get_row_layout() === 'tekstblok' ): ?>
+                                        <div class="textBlock">
+                                            <?php if(get_sub_field('titel')): ?>
+                                                <div class="sub_title"><?php the_sub_field('titel') ?></div>
+                                            <?php endif; ?>  
+                                            <?php if(get_sub_field('tekst')): ?>
+                                                <div class="textBlockText"><?php the_sub_field('tekst') ?></div>
+                                            <?php endif; ?>
+                                        </div>        
                                     <?php else: endif; ?>    
 								<?php endwhile; ?>
 							<?php endif; //if( have_rows('inhoud') ): ?>

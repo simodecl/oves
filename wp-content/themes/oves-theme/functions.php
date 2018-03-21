@@ -88,12 +88,14 @@ function add_theme_scripts() {
 
   wp_enqueue_style( 'OpenSans-Montserrat');
   wp_enqueue_style( 'style', get_stylesheet_uri() );
-    wp_enqueue_script( 'jquery-v-2', 'http://code.jquery.com/jquery-2.1.3.min.js', false );
+  wp_enqueue_script( 'jquery-v-2', 'http://code.jquery.com/jquery-2.1.3.min.js', false );
+  wp_enqueue_script( 'googlemaps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBh_hOM2orEGtwsP_mpqXCYj1JgF5L6oho');
 
    wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css', array(), '4.1.0' );
     add_action( 'wp_enqueue_scripts', 'themeslug_enqueue_script' );
 
   wp_enqueue_script( 'script', get_template_directory_uri() . '/js/main.js');
+  wp_enqueue_script( 'maps', get_template_directory_uri() . '/js/google-maps.js');
 
 
   
@@ -143,7 +145,7 @@ function register_sidebar_locations() {
         array(
             'id'            => 'tertiary-sidebar',
             'name'          => __( 'Tertiary Sidebar' ),
-            'description'   => __( 'Tertiary sidebar for links to social media' ),
+            'description'   => __( 'Tertiary sidebar used for contact form widget' ),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget'  => '</div>',
             'before_title'  => '<h3 class="widget-title">',
@@ -170,20 +172,14 @@ function themename_custom_header_setup() {
 }
 add_action( 'after_setup_theme', 'themename_custom_header_setup' );
 
-/* Filter the single_template with our custom function*/
-add_filter('single_template', 'my_custom_template');
-
-function my_custom_template($single) {
-
-    global $wp_query, $post;
-
-    /* Checks for single template by post type */
-    if ( $post->post_type == 'model' ) {
-        if ( file_exists( PLUGIN_PATH . '/modelpage/single-model.php' ) ) {
-            return PLUGIN_PATH . '/modelpage/single-model.php';
-        }
-    }
-
-    return $single;
-
+function my_acf_init() {
+	
+	acf_update_setting('google_api_key', 'AIzaSyBh_hOM2orEGtwsP_mpqXCYj1JgF5L6oho');
 }
+
+add_action('acf/init', 'my_acf_init');
+
+//change Max upload size
+@ini_set( 'upload_max_size' , '64M' );
+@ini_set( 'post_max_size', '64M');
+@ini_set( 'max_execution_time', '300' );
