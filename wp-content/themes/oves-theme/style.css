@@ -1,7 +1,7 @@
 /*
-Theme Name: OVES Theme
+Theme Name: Oves Theme
 Theme URI: http://arteveldehogeschool.be/
-Description: Dit is een thema ontworpen voor Oves (KAVVV & Fedes vzw) . Dit is in opdracht voor het vak Crossmediaal Project, uit de opleiding Grafische en Digitale Media van Arteveldehogeschool.
+Description: Dit is een thema ontworpen voor Oves vzw. Dit is in opdracht voor het vak Crossmediaal Project, uit de opleiding Grafische en Digitale Media van Arteveldehogeschool.
 Version: 1.0
 Author: Simon Decloedt, Anton Bardyn, Anneleen Peeters
 Author URI: https://github.com/simodecl/
@@ -149,7 +149,7 @@ a, button {
 /*-------------------------------------------Header-----------------------------------------*/
 .headerContainer {
     display: flex;
-    background-color: #3C3C3B; /*Grijs1*/
+    background-color: #38B6AB;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -175,26 +175,26 @@ a, button {
 }
 
 .nav-main li a:hover {
-    color: #3C3C3B; /*Grijs1*/
+    color: #38B6AB; /*Grijs1*/
     background-color: #FFF;
 }
 
 .nav-secondary li a {
-    color: #9D9D9C;
+    color: #21453E;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 5x 10px;
+    margin: 5px 10px;
     min-width: 150px;
     padding: 0;
 }
 .nav-secondary li a:hover {
     background-color: transparent;
-    color: #d2d4d4;
+    color: #FFF;
 }
 .toggle-menu{
-    color: #3C3C3B; /*Grijs1*/
+    color: #21453E; /*Grijs1*/
     background-color: #FFF;
     text-align: center;
     padding: 10 0;
@@ -205,7 +205,7 @@ a, button {
 
 .footerContainer {
     display: flex;
-    background-color: #2F2F2F;
+    background-color: #21453E;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
@@ -249,14 +249,20 @@ a, button {
     color: #FFF
 }
 .nav-footer li a:hover {
-    color: #9D9D9C;
+    color: #A5D7D5;
     background-color: transparent;
+}
+.disclaimer {
+    width: 100%;
+    background: #000;
+    color: #FFF;
+    text-align:center;
 }
 
 /*-------------------------------------------Nieuws post---------------------------------------------------------------------*/
 
 .singleContainer{
-    background-color: #D2D4D4;
+    background-color: #A5D7D5;
     padding: 100px;
     padding-left: 70px;
     display:flex;
@@ -279,7 +285,7 @@ a, button {
     width: 90;
 }
 .day {
-    color: #465CA6;
+    color: #21453E;
     font-size: 3rem;
 }
 .month, .year {
@@ -289,7 +295,7 @@ a, button {
 .singleTitle {
     margin-top: 50px;
     margin-bottom: 25px;
-    color: #465CA6;
+    color: #21453E;
     font-size: 2rem;
 }
 .postsContainer{
@@ -317,8 +323,8 @@ a, button {
     justify-content: center;
 }
 .bestuurCategory {
-    background-color: #9D9D9C;
-    color: #3C3C3B;
+    background-color: #A5D7D5;
+    color: #21453E;
     display: flex;
     flex-direction: column;
     margin: 10px;
@@ -364,10 +370,14 @@ a, button {
     font-weight: bold;
 }
 .bestuur-algemeen-secretariaat {
-    background-color: #9D9D9C;
+    background-color: #38B6AB;
 }
-.bestuur-afdelingsbestuur-oost, .bestuur-raad-van-bestuur {
-    background-color: #3C3C3B;
+.bestuur-afdelingsbestuur-oost{
+    background-color: #2D8076;
+    color: #FFF;
+}
+.bestuur-raad-van-bestuur {
+    background-color: #21453E;
     color: #FFF;
 }
 
@@ -406,15 +416,15 @@ a, button {
     margin: 20px auto;
 }
 .bewegingContainer {
-    border: solid #9D9D9C 2px;
+    border: solid #38B6AB 2px;
 }
 .bewegingContainerButton {
-    background-color: #9D9D9C;
+    background-color: #38B6AB;
     color: #FFF;
     padding-bottom: 30px;
 }
 .bewegingButtonTitle {
-    background-color: #9D9D9C;
+    background-color: #38B6AB;
     width: 100%;
     text-align: center;
     margin: 0 auto;
@@ -429,11 +439,11 @@ a, button {
 }
 .bewegingButton1 {
     background-color: #FFF;
-    color: #9D9D9C;
+    color: #38B6AB;
 }
 .bewegingButtons button:hover {
     background-color: #FFF !important;
-    color: #9D9D9C !important;
+    color: #38B6AB !important;
 }
 .section {
     display: none;
@@ -442,7 +452,7 @@ a, button {
     display: block;
 }
 .sectionTitle {
-    color: #9D9D9C;
+    color: #38B6AB;
 }
 .sectionCards {
     display: flex;
@@ -451,7 +461,7 @@ a, button {
     justify-content: center;
 }
 .sectionCard {
-    background-color: #D2D4D4;
+    background-color: #A5D7D5;
     width: 30%;
     margin:1%;
     min-width: 250px;
@@ -484,49 +494,50 @@ a, button {
 }
 
 .bewegingInschrijven {
-    background-color: #E73843;
-    border-color: #E73843;
+    background-color: #38B6AB;
+    border-color: #38B6AB;
     margin: 20px auto;
 }
 .bewegingInschrijven:focus, .bewegingInschrijven:hover {
-    color: #E73843;
+    color: #38B6AB;
     background-color: #FFF;
 }
 /*----------------------------------------Sportkampen--------------------------------------------------------------------------------*/
 
-.greylink {
+.greenlink {
     background-color: #FFF;
-    border-color: #3C3C3B;
-    color: #3C3C3B;
+    border-color: #2D8076;
+    color: #2D8076;
     width: max-content;
     padding: 10px 20px;
 }
-.greylink:focus, .greylink:hover {
-    background-color: #3C3C3B;
+.greenlink:focus, .greenlink:hover {
+    background-color: #2D8076;
     color: #FFF;
 }
-.lightwhitelink {
+.reversegreenlink {
     color: #FFF;
     border-color: #FFF;
-    background-color: #9D9D9C;
+    background-color: #2D8076;
     width: max-content;
     padding: 10px 20px;
 }
-.lightwhitelink:focus, .lightwhitelink:hover {
+.reversegreenlink:focus, .reversegreenlink:hover {
     background-color: #FFF;
-    color: #9D9D9C;
+    color: #2D8076;
 }
 .sportkampenMain {
     max-width: 100%;
-    background-color: #3C3C3B;
+    background-color: #308278;
     margin-top: -1px;
     margin-bottom: 0;
 }
 .sportclubsMain {
     max-width: 100%;
-    background-color: #D2D4D4;
+    background-color: #308278;
     margin-top: -1px;
     margin-bottom: 0;
+    color: #FFF;
 }
 .subTitle {
     width: 100%;
@@ -566,7 +577,7 @@ a, button {
     width: 100%;
     padding: 20px 20px 0px;
     padding-top: 40px;
-    background-color: #9D9D9C;
+    background-color: #308278;
     margin: 0 auto -1px;
     justify-content: center;
 }
@@ -595,15 +606,15 @@ a, button {
     flex-wrap: wrap;
 }
 .kampButton {
-    color: #3C3C3B;
-    border: solid #3C3C3B;
+    color: #2D8076;
+    border: solid #2D8076;
 }
 .kampButton1{
-    background-color: #3C3C3B;
+    background-color: #2D8076;
     color: #FFF;
 }
 .kampButton:hover {
-    background-color: #3C3C3B !important;
+    background-color: #2D8076 !important;
     color: #FFF !important;
 }
 .kampButtons button:only-child {
@@ -620,7 +631,7 @@ a, button {
     padding: 0;
 }
 .kampLijstItem {
-    background-color: #9D9D9C;
+    background-color: #2D8076;
     color: #FFF;
     display: flex;
     flex-direction: column;
@@ -676,7 +687,7 @@ a, button {
 /*----------------------------------------Sportclubs (gebruikt veel van sportkamp)------------------------------------------*/
 
 .bestuurMemberCard {
-    background-color: #9D9D9C;
+    background-color: #38B6AB;
     color: #FFF;
     width: 95%;
     max-width: 500px;
@@ -692,7 +703,7 @@ a, button {
     flex-wrap: wrap;
     margin: 20px auto;
     justify-content: center;
-    background-color: #D2D4D4;
+    background-color: #38B6AB;
 }
 .pdfLijst {
     list-style: none;
@@ -711,7 +722,7 @@ a, button {
 	padding-top: 150px;
     width: 150px;
     text-align:center;
-    color: #3C3C3B;  
+    color: #FFF;  
 }
 .pdf a[href$=".pdf"]:hover, .pdf a[href$=".xlsx"]:hover {
     color: #FFF;
@@ -724,7 +735,7 @@ a, button {
     width: 100%;
     max-width: 1080px;
     padding:3% 10%;
-    background-color: #9D9D9C;
+    background-color: #2D8076;
     color: #FFF;
     margin: 20px 0;
 }
@@ -764,12 +775,12 @@ a, button {
     align-self: center;
 }
 .joinInfo-1 {
-    background-color: #D2D4D4;
-    color: #3C3C3B;
+    background-color: #38B6AB;
+    color: #FFF;
 }
 .joinInfo-2 {
-    background-color: #9D9D9C;
-    color: #FFF;
+    background-color: #A5D7D5;
+    color: #2D8076;
 }
 .sub_title {
     width: 100%;
@@ -785,11 +796,14 @@ a, button {
 .contactformContainer {
     width: 100%;
     padding: 20px;
-    background-color: #D2D4D4;
+    background-color: #A5D7D5;
     max-width: 1080px;
 }
+.contactformContainer h1 {
+    color: #21453E !important;
+}
 .contactInfo {
-    background-color: #9D9D9C;
+    background-color: #38B6AB;
     color: #FFF;
     height: auto;
 }
@@ -801,7 +815,7 @@ a, button {
 .contactformContainer input[type=text], .contactformContainer input[type=email], .contactformContainer textarea {
     border-radius: 50px;
     background-color: transparent;
-    color: #3C3C3B;
+    color: #21453E;
     border: solid #FFF 2px;
     padding: 10px;
     margin: 10px 0;
@@ -812,14 +826,14 @@ a, button {
     border-radius: 25px;
 }
 .contactButton {
-    border: solid #465CA6 2px;
+    border: solid #21453E 2px;
     color: #FFF;
-    background-color: #465CA6;
+    background-color: #21453E;
 }
 .contactButton:hover {
-    border: solid #465CA6 2px;
+    border: solid #21453E 2px;
     background-color: #FFF;
-    color: #465CA6;
+    color: #21453E;
 }
 .acf-map {
 	width: 100%;
@@ -846,7 +860,7 @@ a, button {
 .homeNewsContainer {
     width:100%;
     max-width: 700px;
-    background-color: #D2D4D4;
+    background-color: #A5D7D5;
     margin: 0 auto;
 }
 .homeNewsContainer .postsGroup {
@@ -861,13 +875,13 @@ a, button {
     overflow: hidden;
 }
 .moreNews {
-    border-color: #3C3C3B;
-    background-color: #3C3C3B;
+    border-color: #21453E;
+    background-color: #21453E;
     color: #FFF;
     margin-bottom:50px;
 }
 .moreNews:hover{
-    color: #3C3C3B;
+    color: #21453E;
     background-color: #FFF;
 }
 .homeSportsContainer {
@@ -878,7 +892,7 @@ a, button {
     flex-wrap: wrap;
     margin: 0 auto;
     justify-content: center;
-    background-color: #3C3C3B;
+    background: linear-gradient(#38B6AB, #1C5B56);
     padding-bottom: 20px;
 }
 .homeSportsContainer .sportTitle, .homeSportsContainer .pageTitle {
@@ -890,12 +904,45 @@ a, button {
 .newsletterContainer {
     width: 100%;
     max-width: 1080px;
-    background-color: #9D9D9C;
+    background-color: #38B6AB;
     color: #FFF;
 }
 .newsletterContainer .descriptionMain {
     margin:20px auto;
     text-align: center;
+}
+.nieuwsbriefInschrijven {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.nieuwsbriefInschrijven input[type=email]{
+    background-color: transparent;
+    color: #FFF;
+    border: solid #FFF 2px;
+    padding:10px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    width: 100%;
+}
+.nieuwsbriefInschrijven .your-email {
+    max-width: 60%;
+}
+.nieuwsbriefInschrijven input[type=email]::placeholder{
+    color: #FFF;
+    opacity: 1;
+}
+.nieuwsbriefInschrijven input[type=submit]{
+    color: #38B6AB;
+    background-color: #FFF;
+    border: solid #FFF 2px;
+    padding: 10px;
+    font-weight:bold;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    width:150px;
+    height: 46px;
 }
 /*----------------------------------------Color only class------------------------------------------------------------------*/
 
@@ -908,8 +955,14 @@ a, button {
 .blue {
     color: #465CA6; 
 }
+.darkgreen {
+    color: #21453E;
+}
 .darkgrey {
     color: #3C3C3B;
+}
+.white {
+    color: #FFF;
 }
 .center {
     display:block;

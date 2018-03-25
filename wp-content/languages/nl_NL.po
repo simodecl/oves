@@ -4047,13 +4047,13 @@ msgid "1 result found. Use up and down arrow keys to navigate."
 msgstr "Één resultaat gevonden. Gebruik de omhoog/omlaag-pijlen op je toetsenbord om te navigeren."
 
 #. translators: %s: user name
-#: wp-includes/comment-template.php:2232
+#: wp-includes/comment-template.php:2231
 msgid "Logged in as %s. Edit your profile."
 msgstr "Ingelogd als %s. Je profiel bewerken."
 
 #. translators: 1: edit user link, 2: accessibility text, 3: user name, 4:
 #. logout URL
-#: wp-includes/comment-template.php:2229
+#: wp-includes/comment-template.php:2228
 msgid "<a href=\"%1$s\" aria-label=\"%2$s\">Logged in as %3$s</a>. <a href=\"%4$s\">Log out?</a>"
 msgstr "<a href=\"%1$s\" aria-label=\"%2$s\">Ingelogd als %3$s</a>. <a href=\"%4$s\">Uitloggen?</a>"
 
@@ -9192,7 +9192,7 @@ msgstr "<strong>Conflicterende waarden voor de constanten VHOST en SUBDOMAIN_INS
 msgid "<strong>ERROR</strong>: This username is invalid because it uses illegal characters. Please enter a valid username."
 msgstr "<strong>FOUT</strong>: Deze gebruikersnaam is ongeldig omdat er illegale tekens in voorkomen. Vul een geldige gebruikersnaam in."
 
-#: wp-includes/comment-template.php:2207
+#: wp-includes/comment-template.php:2206
 msgid "Required fields are marked %s"
 msgstr "Vereiste velden zijn gemarkeerd met %s"
 
@@ -9354,7 +9354,7 @@ msgstr "Er is een fout opgetreden bij het toevoegen van jou op deze site. Ga ter
 msgid "This file is too big. Files must be less than %d KB in size."
 msgstr "Dit bestand is te groot. Bestanden moeten kleiner zijn dan %d KB."
 
-#: wp-includes/comment-template.php:2236
+#: wp-includes/comment-template.php:2235
 msgid "Your email address will not be published."
 msgstr "Het e-mailadres wordt niet gepubliceerd."
 
@@ -11279,19 +11279,19 @@ msgstr "Dubbele reactie ontdekt: het lijkt erop dat je dit al hebt gezegd."
 msgid "Unapproved"
 msgstr "Geweigerd"
 
-#: wp-includes/comment-template.php:2251
+#: wp-includes/comment-template.php:2250
 msgid "Post Comment"
 msgstr "Reactie plaatsen"
 
-#: wp-includes/comment-template.php:2250
+#: wp-includes/comment-template.php:2249
 msgid "Cancel reply"
 msgstr "Reactie annuleren"
 
-#: wp-includes/comment-template.php:1874 wp-includes/comment-template.php:2245
+#: wp-includes/comment-template.php:1874 wp-includes/comment-template.php:2244
 msgid "Leave a Reply to %s"
 msgstr "Laat een reactie achter op %s"
 
-#: wp-includes/comment-template.php:1873 wp-includes/comment-template.php:2244
+#: wp-includes/comment-template.php:1873 wp-includes/comment-template.php:2243
 msgid "Leave a Reply"
 msgstr "Geef een reactie"
 
@@ -11384,7 +11384,7 @@ msgid "Tags: "
 msgstr "Tags: "
 
 #. translators: %s: login URL
-#: wp-includes/comment-template.php:2223
+#: wp-includes/comment-template.php:2222
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr "Je moet <a href=\"%s\">inloggen</a> om een reactie te kunnen plaatsen."
 
@@ -11442,7 +11442,7 @@ msgstr "Om een onbekende maar bijzonder irritante reden kan dit bericht niet wor
 msgid "Widgets"
 msgstr "Widgets"
 
-#: wp-includes/comment-template.php:2203
+#: wp-includes/comment-template.php:2202
 msgid "Website"
 msgstr "Website"
 
@@ -11498,7 +11498,7 @@ msgstr "Datumnotatie"
 msgid "Allow people to post comments on new articles"
 msgstr "Sta toe dat bezoekers kunnen reageren op nieuwe artikelen"
 
-#: wp-includes/comment-template.php:2201 wp-login.php:809
+#: wp-includes/comment-template.php:2200 wp-login.php:809
 msgid "Email"
 msgstr "E-mail"
 
@@ -11958,7 +11958,7 @@ msgstr "Geen"
 msgid "Description"
 msgstr "Omschrijving"
 
-#: wp-includes/comment-template.php:2199
+#: wp-includes/comment-template.php:2198
 msgid "Name"
 msgstr "Naam"
 
@@ -12046,7 +12046,7 @@ msgstr "Nee"
 msgid "Are you sure you want to do this?"
 msgstr "Weet je zeker dat je dit wilt doen?"
 
-#: wp-includes/comment-template.php:1082 wp-includes/comment-template.php:2219
+#: wp-includes/comment-template.php:1082 wp-includes/comment-template.php:2218
 msgctxt "noun"
 msgid "Comment"
 msgstr "Reactie"

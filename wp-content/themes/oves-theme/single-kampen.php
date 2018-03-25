@@ -19,8 +19,8 @@ if(have_posts()):
                 </div>   
             </div>
         </div>
-        <img width="100%" src="<?php bloginfo('template_url'); ?>/assets/waves/wave_groen-01.png" />
-        <h1 class="pageTitle"><?php the_field('pagina_hoofding') ?></h1>
+        <div style="max-width:100vw;overflow:hidden;"><img style="margin:-9% 0 0 -10px;width:103%;" src="<?php bloginfo('template_url'); ?>/assets/waves/OVES_3_180.svg" /></div>
+        <h1 class="pageTitle darkgreen"><?php the_field('pagina_hoofding') ?></h1>
         <?php if( get_field('beschrijving') ) :?>
             <div class="descriptionContainer">
                 <div style="text-align: center;" class="descriptionMain"><?php the_field('beschrijving') ?></div>
@@ -106,11 +106,11 @@ if(have_posts()):
                                         <?php endif; ?>
                                         <?php $link = get_field('link_1');
                                             if( $link ): ?>
-                                                <button style="margin: 10 auto" class="center"><a class="button lightwhitelink" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a></button>
+                                                <button style="margin: 10 auto" class="center"><a class="button reversegreenlink" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a></button>
                                         <?php endif; ?>
                                         <?php $link2 = get_field('link_2');
                                             if( $link2 ): ?>
-                                                <button style="margin: 10 auto; font-weight: bold; text-transform: uppercase;" class="center"><a style="border-color: #FFF" class="button greylink" href="<?php echo $link2['url']; ?>" target="<?php echo $link2['target']; ?>"><?php echo $link2['title']; ?></a></button>
+                                                <button style="margin: 10 auto; font-weight: bold; text-transform: uppercase;" class="center"><a style="border-color: #FFF" class="button greenlink" href="<?php echo $link2['url']; ?>" target="<?php echo $link2['target']; ?>"><?php echo $link2['title']; ?></a></button>
                                         <?php endif; ?>  
 
                                     </li>

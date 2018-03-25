@@ -2,7 +2,7 @@
 <?php
 get_header();
 ?>
-<h1 class="pageTitle blue"><?php the_field('pagina_hoofding') ?></h1>
+<h1 class="pageTitle darkgreen"><?php the_field('pagina_hoofding') ?></h1>
 
 <?php if( get_field('beschrijving') ) :?>
 <div class="descriptionContainer">

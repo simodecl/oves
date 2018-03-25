@@ -2,7 +2,7 @@
 <?php
 get_header();
 ?>
-<h1 class="pageTitle red"><?php the_field('pagina_hoofding') ?></h1>
+<h1 class="pageTitle darkgreen"><?php the_field('pagina_hoofding') ?></h1>
 
 <?php if( get_field('beschrijving') ) :?>
 <div class="descriptionContainer">
@@ -15,7 +15,7 @@ get_header();
             <button class="center"><a class="button greylink" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a></button>
     <?php endif; ?>   
 
-<img width="100%" src="<?php bloginfo('template_url'); ?>/assets/waves/wave_rood-02.png" />
+<div style="max-width:100vw;overflow:hidden;"><img style="margin:0 0 -9% -10px;width:103%;" src="<?php bloginfo('template_url'); ?>/assets/waves/OVES3.svg" /></div>
 <div class="sportclubsMain">
     <h1 class="subTitle"><?php the_field('subtitel') ?></h1>
     <container class="sportkampContainer">
@@ -37,7 +37,7 @@ get_header();
                         <?php endif; ?>
                     <?php endif; ?>
                 </div>    
-                <div style="color:#000;" class="sportkampTitle">
+                <div class="sportkampTitle">
                     <?php  echo get_the_title(); ?>
                 </div>      
             </div> 

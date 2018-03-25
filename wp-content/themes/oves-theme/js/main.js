@@ -50,7 +50,7 @@ function show($id) {
     };
 
     buttonActive.style.backgroundColor = "#FFF";
-    buttonActive.style.color = "#9D9D9C";
+    buttonActive.style.color = "#38B6AB";
 }
 
 function showSport($id) {
@@ -69,9 +69,9 @@ function showSport($id) {
 
     for (s ; s < buttonAll.length; s++) {
         buttonAll[s].style.backgroundColor = "transparent";
-        buttonAll[s].style.color = "#3C3C3B";
+        buttonAll[s].style.color = "#2D8076";
     };
 
-    buttonActive.style.backgroundColor = "#3C3C3B";
+    buttonActive.style.backgroundColor = "#2D8076";
     buttonActive.style.color = "#FFF";
 }

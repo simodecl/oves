@@ -2,7 +2,7 @@
 <?php
 get_header();
 ?>
-<h1 class="pageTitle red"><?php the_field('hoofdtitel') ?></h1>
+<h1 class="pageTitle darkgreen"><?php the_field('hoofdtitel') ?></h1>
 
 <?php if( get_field('beschrijving') ) :?>
 <div class="descriptionContainer">
@@ -23,7 +23,7 @@ get_header();
     <?php endif; ?>
 </div>
 
-<button onClick="toggledescription()" id="toggle-description" class="red">
+<button onClick="toggledescription()" id="toggle-description" class="darkgreen">
     Lees meer
 </button>     
 <?php endif; ?>

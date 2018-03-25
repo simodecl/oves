@@ -2,7 +2,7 @@
 <?php
 get_header();
 ?>
-<h1 class="pageTitle blue"><?php the_field('pagina_hoofding') ?></h1>
+<h1 class="pageTitle darkgreen"><?php the_field('pagina_hoofding') ?></h1>
 
 <?php if( get_field('beschrijving') ) :?>
 <div class="descriptionContainer">
@@ -13,7 +13,7 @@ get_header();
     <?php $info1= get_field('joinInfo1'); if($info1) : ?>
         <div class="joinInfo joinInfo-1">
             <?php if($info1['sub_titel']) : ?>
-                <h1 class="sub_title blue"><?php echo $info1['sub_titel'] ?></h1>
+                <h1 class="sub_title"><?php echo $info1['sub_titel'] ?></h1>
             <?php endif; ?>
             <?php if($info1['infoveld']) : ?>
                 <div class="joinInfoveld"><?php echo $info1['infoveld'] ?></div>
@@ -43,7 +43,7 @@ get_header();
     <?php $pdflijst = get_field('pdflijst'); if($pdflijst) : ?>
         <div class="pdfLijstContainer">
             <?php if($pdflijst['lijst_titel']) : ?>
-                <h1 class="sub_title darkgrey"><?php echo $pdflijst['lijst_titel'] ?></h1>
+                <h1 class="sub_title white"><?php echo $pdflijst['lijst_titel'] ?></h1>
             <?php endif; ?>
             <?php $pdfs = $pdflijst['pdfs']?>
             <?php if( $pdfs ): ?>

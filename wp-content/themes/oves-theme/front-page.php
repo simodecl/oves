@@ -10,7 +10,7 @@ get_header();
 <?php endif; ?>  
 <div id="main" class="homeMain">
     <div class="homeNewsContainer">
-        <div class="pageTitle">
+        <div class="pageTitle darkgreen">
             WEES OP DE HOOGTE!
         </div>
         <?php
@@ -69,7 +69,8 @@ get_header();
         <h1 style="margin:25px auto;" class="pageTitle">SCHRIJF JE IN VOOR DE NIEUWSBRIEF!</h1>
         <div class="descriptionMain">
         Via de online nieuwsbrief ben je altijd op de hoogte. De nieuwsbrief zal maandelijk naar jouw e-mail adres gestuurd worden. 
-        </div>    
+        </div>
+        <?php echo do_shortcode('[contact-form-7 id="488" title="Nieuwsbrief"]') ?>    
     </div>
 </div>
 <?php get_footer(); ?>

@@ -2,7 +2,7 @@
 <?php
 get_header();
 ?>
-<h1 class="pageTitle">NIEUWSBERICHTEN</h1>
+<h1 class="pageTitle darkgreen">NIEUWSBERICHTEN</h1>
 
 
 <div id="main" class="singleContainer postsContainer">

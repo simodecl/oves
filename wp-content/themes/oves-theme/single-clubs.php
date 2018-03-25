@@ -18,7 +18,7 @@ if(have_posts()):
                 </div>      
             </div>
         </div>
-        <img width="100%" src="<?php bloginfo('template_url'); ?>/assets/waves/wave_groen-01.png" />
+        <div style="max-width:100vw;overflow:hidden;"><img style="margin:-9% 0 0 -10px;width:103%;" src="<?php bloginfo('template_url'); ?>/assets/waves/OVES_3_180.svg" /></div>
         <h1 class="pageTitle"><?php the_field('pagina_hoofding') ?></h1>
         <?php if( get_field('beschrijving') ) :?>
             <div class="descriptionContainer">
@@ -57,7 +57,7 @@ if(have_posts()):
                             if( have_rows('algemeen') ):
                                 while( have_rows('algemeen') ): the_row(); ?>
                                     <?php if( get_sub_field('subtitel')) : ?>
-                                        <h1 class="pageTitle red"><?php the_sub_field('subtitel') ?></h1>
+                                        <h1 class="pageTitle darkgreen"><?php the_sub_field('subtitel') ?></h1>
                                     <?php endif; ?>
                                     <?php if( get_sub_field('beschrijving') ) :?>
                                         <div class="descriptionContainer">
@@ -84,7 +84,7 @@ if(have_posts()):
                                                 <?php endif; ?>
                                             </div>    
                                             <div class="bestuurMemberInfo">
-                                                <div style="color:#3C3C3B;margin-bottom: 10px;" class="bestuurMemberTitle">
+                                                <div style="margin-bottom: 10px;" class="bestuurMemberTitle darkgreen">
                                                     <?php if(get_sub_field('naam')) : ?>
                                                             <?php the_sub_field('naam'); ?>
                                                     <?php endif; ?>
