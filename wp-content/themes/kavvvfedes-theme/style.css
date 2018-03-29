@@ -296,7 +296,7 @@ a, button {
     margin-top: 50px;
     margin-bottom: 25px;
     color: #465CA6;
-    font-size: 2rem;
+    font-size: 1.3em;
 }
 .postsContainer{
     display: flex;
@@ -313,7 +313,9 @@ a, button {
     width: 100%;
     max-width: 768px;
 }
-
+.singlePost img {
+    max-width: 100%;
+}
 /*----------------------------------------Bestuur---------------------------------------------------------------------------*/
 
 .bestuurContainer {
@@ -1009,9 +1011,7 @@ a, button {
     .footerContainer{
         flex-direction: column;
     }
-    .footerItem{
-        margin: 10px auto;
-    }
+    
     .nav-main, .nav-secondary {
         display:none;
     }
