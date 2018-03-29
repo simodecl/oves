@@ -389,7 +389,7 @@ a, button {
 .descriptionMain {
     max-width: 500px;
     margin: 20px;
-    text-align: justify;
+    text-align: center;
 }
 .descriptionContainerExtra {
     display: none;
